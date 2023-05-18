@@ -1,0 +1,7 @@
+package Theory.Day6.Repositories;
+
+import Theory.Day6.Models.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoryRepository extends JpaRepository<Category, Long> {
+}
