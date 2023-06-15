@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <link rel="stylesheet" type="text/css"
+        href="/webjars/bootstrap/css/bootstrap.min.css" />
+  <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div align="center" class="container text-center">
+  <form action="#" th:action="@{/products/save}" th:object="${product} "
+        method="post">
+    <table>
+      <tr>
+        <td>Name</td>
+        <td><input type="text" th:field="*{Name}" class="form-control"
+                   required minlength="2" maxlength="255"></td>
+      </tr>
+      <tr>
+        <td>Brand</td>
+        <td><input type="text" th:field="*{Brand}"
+                   class="form-control" required minlength="2" maxlength="255"></td>
+      </tr>
+      <tr>
+        <td>Price</td>
+        <td><input type="text" th:field="*{Price}"
+                   class="form-control" required minlength="2" maxlength="255"></td>
+      </tr>
+
+      <tr>
+        <td>
+          <button type="submit">Save</button>
+        </td>
+      </tr>
+
+    </table>
+
+
+  </form>
+</div>
+
+</body>
+</html>
